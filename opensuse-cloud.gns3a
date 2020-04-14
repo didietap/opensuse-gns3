@@ -1,0 +1,53 @@
+{
+    "name": "openSUSE",
+    "category": "guest",
+    "description": "openSUSE is a free and Linux-based operating system for PC, Laptop or Server. The openSUSE project is a community program sponsored by Novell. It is a general purpose operating system built on top of the Linux kernel, developed by the community-supported openSUSE Project and sponsored by SUSE and a number of other companies.",
+    "vendor_name": "SUSE LLC.",
+    "vendor_url": "https://www.opensuse.org/",
+    "documentation_url": "https://en.opensuse.org/Main_Page",
+    "product_name": "openSUSE",
+    "product_url": "https://www.opensuse.org/#Leap",
+    "registry_version": 1,
+    "status": "stable",
+    "availability": "free",
+    "maintainer": "Didiet A. Pambudiono",
+    "maintainer_email": "pambudiono@opensuse.org",
+    "usage": "Username: opensuse\nPassword: opensuse",
+    "port_name_format": "Ethernet{0}",
+    "qemu": {
+        "adapter_type": "virtio-net-pci",
+        "adapters": 1,
+        "ram": 1024,
+        "hda_disk_interface": "virtio",
+        "arch": "x86_64",
+        "console_type": "telnet",
+        "boot_priority": "c",
+        "kvm": "require",
+        "options": "-nographic"
+    },
+    "images": [
+        {
+            "filename": "openSUSE-Leap-15.1-OpenStack.x86_64.qcow2",
+            "version": "Leap 15.1",
+            "md5sum": "9d5295e993788381f0f2b36a60a13932",
+            "filesize": 553822720,
+            "download_url": "https://download.opensuse.org/repositories/Cloud:/Images:/Leap_15.1/images/openSUSE-Leap-15.1-OpenStack.x86_64.qcow2"
+        },
+        {
+            "filename": "opensuse-cloud-init-data.iso",
+            "version": "1.0",
+            "md5sum": "a183ef04293641d8442805e1877bb8e3",
+            "filesize": 374784,
+            "download_url": "https://github.com/didietap/opensuse-gns3/raw/master/opensuse-cloud-init-data.iso"
+        }
+    ],
+    "versions": [
+        {
+            "name": "Leap 15.1",
+            "images": {
+                "hda_disk_image": "openSUSE-Leap-15.1-OpenStack.x86_64.qcow2",
+                "cdrom_image": "opensuse-cloud-init-data.iso"
+            }
+        }
+    ]
+}
